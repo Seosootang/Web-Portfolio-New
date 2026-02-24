@@ -2,6 +2,7 @@
 
 import React from "react";
 import SplitText from "./SplitText/SplitText";
+import PixelCard from "./PixelCard/PixelCard";
 
 const About: React.FC = () => {
   const skills = ["PHP", "Laravel", "MySQL", "Git", "React", "TypeScript", "Vue.js", "REST APIs", "Shadcn UI", "Flutter", "Dart", "Python"];
@@ -48,30 +49,32 @@ const About: React.FC = () => {
             <div>
               <SplitText text="Currently Working At" tag="h3" className="text-2xl font-semibold text-white mb-6" splitType="words" delay={80} duration={1.0} from={{ opacity: 0, y: 25 }} to={{ opacity: 1, y: 0 }} textAlign="left" />
 
-              <div className="bg-neutral-900/60 border border-yellow-400/30 rounded-xl p-6 backdrop-blur-sm animate-slide-in-up hover:border-yellow-400/50 transition-all duration-300">
-                <h4 className="text-xl font-bold text-yellow-400 mb-3">Aksara Teknologi Mandiri</h4>
+              <PixelCard variant="yellow" gap={5} speed={14} noFocus className="!w-full !h-auto !aspect-auto !rounded-xl !border-yellow-400/30 animate-slide-in-up">
+                <div className="bg-neutral-900/60 rounded-xl p-6 backdrop-blur-sm hover:border-yellow-400/50 transition-all duration-300">
+                  <h4 className="text-xl font-bold text-yellow-400 mb-3">Aksara Teknologi Mandiri</h4>
 
-                <div className="space-y-2 mb-4">
-                  <p className="text-gray-300 text-sm">
-                    Posisi: <span className="text-white font-medium">Back-end Developer (Internship)</span>
-                  </p>
-                  <p className="text-gray-400 text-sm">
-                    Periode: <span className="text-gray-300">July 2025 - Present</span>
-                  </p>
+                  <div className="space-y-2 mb-4">
+                    <p className="text-gray-300 text-sm">
+                      Posisi: <span className="text-white font-medium">Back-end Developer (Internship)</span>
+                    </p>
+                    <p className="text-gray-400 text-sm">
+                      Periode: <span className="text-gray-300">July 2025 - Present</span>
+                    </p>
+                  </div>
+
+                  <a
+                    href="https://aksarateknologi.co.id/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-5 py-2 rounded-full bg-yellow-400 text-neutral-900 font-semibold text-sm hover:bg-yellow-300 transition-all duration-300 hover:scale-105"
+                  >
+                    Visit Company
+                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
                 </div>
-
-                <a
-                  href="https://aksarateknologi.co.id/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-5 py-2 rounded-full bg-yellow-400 text-neutral-900 font-semibold text-sm hover:bg-yellow-300 transition-all duration-300 hover:scale-105"
-                >
-                  Visit Company
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </div>
+              </PixelCard>
             </div>
 
             {/* Skills Section */}
@@ -93,57 +96,67 @@ const About: React.FC = () => {
           {/* Right Side - Stats Cards */}
           <div className="space-y-6 animate-slide-in-right">
             <div className="grid grid-cols-2 gap-4 lg:grid-cols-1 lg:gap-6">
-              <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-700 hover:border-yellow-400/30 transition-all duration-300 group">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2 group-hover:scale-110 transition-transform duration-300">2+</div>
-                  <div className="text-gray-300 text-sm">Years Experience</div>
+              <PixelCard variant="yellow" gap={6} speed={12} noFocus className="!w-full !h-auto !aspect-auto !rounded-xl !border-neutral-700">
+                <div className="p-6 rounded-xl border border-white hover:border-yellow-400/30 transition-all duration-300 group">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-yellow-400 mb-2 group-hover:scale-110 transition-transform duration-300">2+</div>
+                    <div className="text-gray-300 text-sm font-bold">Years Experience</div>
+                  </div>
                 </div>
-              </div>
+              </PixelCard>
 
-              <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-700 hover:border-yellow-400/30 transition-all duration-300 group">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2 group-hover:scale-110 transition-transform duration-300">10+</div>
-                  <div className="text-gray-300 text-sm">Projects Completed</div>
+              <PixelCard variant="yellow" gap={6} speed={12} noFocus className="!w-full !h-auto !aspect-auto !rounded-xl !border-neutral-700">
+                <div className="p-6 rounded-xl border border-white hover:border-yellow-400/30 transition-all duration-300 group">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-yellow-400 mb-2 group-hover:scale-110 transition-transform duration-300">10+</div>
+                    <div className="text-gray-300 text-sm font-bold">Projects Completed</div>
+                  </div>
                 </div>
-              </div>
+              </PixelCard>
 
-              <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-700 hover:border-yellow-400/30 transition-all duration-300 group">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2 group-hover:scale-110 transition-transform duration-300">10+</div>
-                  <div className="text-gray-300 text-sm">Technologies</div>
+              <PixelCard variant="yellow" gap={6} speed={12} noFocus className="!w-full !h-auto !aspect-auto !rounded-xl !border-neutral-700">
+                <div className="p-6 rounded-xl border border-white hover:border-yellow-400/30 transition-all duration-300 group">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-yellow-400 mb-2 group-hover:scale-110 transition-transform duration-300">10+</div>
+                    <div className="text-gray-300 text-sm font-bold">Technologies</div>
+                  </div>
                 </div>
-              </div>
+              </PixelCard>
 
-              <div className="bg-neutral-900 p-6 rounded-xl border border-neutral-700 hover:border-yellow-400/30 transition-all duration-300 group">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-400 mb-2 group-hover:scale-110 transition-transform duration-300">24/7</div>
-                  <div className="text-gray-300 text-sm">Learning</div>
+              <PixelCard variant="yellow" gap={6} speed={12} noFocus className="!w-full !h-auto !aspect-auto !rounded-xl !border-neutral-700">
+                <div className="p-6 rounded-xl border border-white hover:border-yellow-400/30 transition-all duration-300 group">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-yellow-400 mb-2 group-hover:scale-110 transition-transform duration-300">24/7</div>
+                    <div className="text-gray-300 text-sm font-bold">Learning</div>
+                  </div>
                 </div>
-              </div>
+              </PixelCard>
             </div>
 
             {/* Additional Info Card */}
-            <div className="bg-gradient-to-br from-yellow-400/10 to-yellow-400/5 border border-yellow-400/30 rounded-xl p-6 backdrop-blur-sm">
-              <h4 className="text-lg font-semibold text-white mb-3">Quick Facts</h4>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                  Based in Indonesia
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                  Available for freelance work
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                  Passionate about clean code
-                </li>
-                <li className="flex items-center">
-                  <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                  Always learning new tech
-                </li>
-              </ul>
-            </div>
+            <PixelCard variant="yellow" gap={6} speed={12} noFocus className="!w-full !h-auto !aspect-auto !rounded-xl !border-yellow-400/30">
+              <div className="bg-gradient-to-br from-yellow-400/10 to-yellow-400/5 rounded-xl p-6 backdrop-blur-sm">
+                <h4 className="text-lg font-semibold text-white mb-3">Quick Facts</h4>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                    Based in Indonesia
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                    Available for freelance work
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                    Passionate about clean code
+                  </li>
+                  <li className="flex items-center">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
+                    Always learning new tech
+                  </li>
+                </ul>
+              </div>
+            </PixelCard>
           </div>
         </div>
       </div>

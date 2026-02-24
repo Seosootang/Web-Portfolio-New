@@ -119,7 +119,7 @@ const Hero: React.FC<HeroProps> = ({ name, title, description }) => {
                 <img 
                   src="/assets/images/profile.jpg"
                   alt="Profile"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-full"
                 />
               </div>
               {/* Glow effects */}

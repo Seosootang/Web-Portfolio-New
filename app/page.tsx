@@ -150,7 +150,7 @@ export default function Home() {
         <Threads color={[1, 1, 1]} amplitude={1} distance={0.1} />
       </div>
       <div className="relative z-10">
-        <Header title="Berryl Abyantara" />
+        <Header />
         <Hero name="Berryl Abyantara" title="Back-end Developer" description="Welcome to my personal website👋" />
         <About />
         <Projects projects={projectsData} />
